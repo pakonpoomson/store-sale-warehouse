@@ -1,0 +1,29 @@
+[
+  {
+    "table_name": "STORE_SALES",
+    "timestamp_columns": ["SS_SOLD_DATE_SK", "SS_SOLD_TIME_SK"],
+    "pk_column": "SS_SOLD_DATE_SK|SS_SOLD_TIME_SK|SS_ITEM_SK|SS_CUSTOMER_SK",
+    "metric_columns": ["SS_NET_PAID", "SS_SALES_PRICE"],
+    "source": "snf",
+    "expect_row_group": "SS_SOLD_DATE_SK",
+    "expect_row": 19770318,
+    "expect_row_deviation_percent": 10
+  },
+  {
+    "table_name": "CUSTOMER",
+    "timestamp_columns": ["C_CUSTOMER_SK"],
+    "pk_column": "C_CUSTOMER_SK",
+    "metric_columns": [],
+    "source": "snf"
+  },
+  {
+    "table_name": "ITEM",
+    "timestamp_columns": ["I_REC_START_DATE", "I_REC_END_DATE"],
+    "pk_column": "I_ITEM_ID",
+    "metric_columns": ["I_CURRENT_PRICE", "I_WHOLESALE_COST"],
+    "source": "snf",
+    "expect_row_group": "I_REC_START_DATE",
+    "expect_row": 66835,
+    "expect_row_deviation_percent": 10
+  }
+]
