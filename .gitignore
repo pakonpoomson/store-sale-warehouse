@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Big Query key .json
+store-sale-456806-0e96af61e18e.json
+
+git rm --cached store-sale-456806-0e96af61e18e.json
